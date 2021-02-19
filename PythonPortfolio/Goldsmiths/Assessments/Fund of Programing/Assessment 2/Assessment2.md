@@ -17,7 +17,7 @@ Your program will contain a function `main()` which will print a 1-line message 
  - **R** (**R**emove student): 
 	 - **(i)** when this option is chosen, the program should ask the user to enter name and surname of an existing student; if present in the database, the corresponding student record should be ***removed*** from it. 
 	 - **(ii)** If the database does not contain the specified student, or it is **empty**, the program **should not** crash but print a warning message (e.g., “Student not found” or “Database empty”) and leave the database unchanged. 
-	 - **[(i) 5 marks; (ii) 5 marks] **
+	 - **[(i) 5 marks; (ii) 5 marks]**
  - **L** (**L**ist database): 
 	 - the program should print the full list of students currently in the database, with each student’s surname and name printed (in this order) on a ***separate line***. If the database is empty, the program should ***not crash*** but print a warning (e.g., “Database empty”). 
 	 - **[5 marks]**
@@ -27,7 +27,7 @@ After any of ‘A’, ‘R’ or ‘L’ have completed, the code should repeat 
  - **X** (**E**XIT): the program should terminate ‘gracefully’, ie, without crashing or producing an error. 
  - **[5 marks]**
 
-**NOTE**: *your interface must closely follow the above requirements. Any differences (e.g., using lowercase ‘a’, ‘r’, ‘l’, ‘x’ instead of ‘A’, ‘R’, ‘L’, ‘X’) will incur in up to **50 PENALTY MARKS**.*
+**NOTE**: *your interface must closely follow the above requirements. Any differences (e.g., using lowercase ‘a’, ‘r’, ‘l’, ‘x’ instead of ‘A’, ‘R’, ‘L’, ‘X’) will incur in up to **50 PENALTY MARKS**.
 
 ## INPUT VALIDATION / ERROR CHECKING:
 
