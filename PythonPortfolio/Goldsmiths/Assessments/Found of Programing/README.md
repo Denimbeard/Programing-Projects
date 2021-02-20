@@ -13,10 +13,13 @@ I look forward to seeing you all soon in the classroom!
 With very best wishes,
 Max
 
-AIMS & LEARNING OUTCOMES
+## AIMS & LEARNING OUTCOMES
+
 This module aims to provide a basic understanding of computer programming. On completion, you will have the necessary skills to be able to design, build and test a small system using a high-level programming language (Python).
-Learning outcomes: 
-Understand basic programming concepts, such as strings, assignments, sequential and selective executions, loops, and functions
-Write short programs that use the fundamental program constructs including standard conditional and iterative control structures
-Write simple programs involving the drawing of basic geometric shapes
-Understand and explain the basic ideas of programming, including variables, basic types and control structures.
+
+## Learning outcomes
+
+- Understand basic programming concepts, such as strings, assignments, sequential and selective executions, loops, and functions.
+- Write short programs that use the fundamental program constructs including standard conditional and iterative control structures.
+- Write simple programs involving the drawing of basic geometric shapes.
+- Understand and explain the basic ideas of programming, including variables, basic types and control structures.

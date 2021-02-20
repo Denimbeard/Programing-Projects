@@ -1,0 +1,125 @@
+
+-------- Test 1: 'CBABBAACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 2: 'CBACCBABBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 3: 'BACBABBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 4: 'BBACBAACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 5: 'BBAACCCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 6: 'BABBAAACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 7: 'CCBABBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 8: 'BBAAABACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 9: 'BBAACBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 10: 'CCBBAACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 11: 'CBBAAACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 12: 'CCBACCCBBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 13: 'CCBBABACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 14: 'BBACCCCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 15: 'CBACCCBBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 16: 'CCCCBBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 17: 'BABACCCBBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 18: 'BBACBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 19: 'CBABACBBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 20: 'BBABABACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 21: 'BBABACBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 22: 'CCCBABABBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 23: 'BABBAABACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 24: 'BABABBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 25: 'CBACCBBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.

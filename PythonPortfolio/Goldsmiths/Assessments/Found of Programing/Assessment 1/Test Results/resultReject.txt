@@ -1,0 +1,133 @@
+
+-------- Test 1: '' ----------
+ 
+Please enter the string to be recognized: Traceback (most recent call last):
+  File "checker.py", line 174, in <module>
+    print(step1(arr))
+  File "checker.py", line 49, in step1
+    if arr[i] == a:
+IndexError: string index out of range
+
+-------- Test 2: 'BBABACBACC B' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 3: 'C' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 4: 'CCBA' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 5: 'BBAAC' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 6: 'CB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 7: 'CBABACBBACCB9' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 8: 'CC' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 9: 'CBABBA' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 10: 'CBACCBBACaCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 11: 'CBACCBABB!ACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 12: 'CBACCCBBAC CB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 13: 'BB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 14: 'BABBAA' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 15: 'CBACCBBACCB#' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 16: 'BBAACCC' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 17: 'CCCBABABBAC@CB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 18: 'BABBA' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 19: 'CBACCBAB5BACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 20: 'BBAB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 21: 'BACBAB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 22: 'BBACBAA' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 23: ' ' ----------
+ 
+Please enter the string to be recognized: Traceback (most recent call last):
+  File "checker.py", line 174, in <module>
+    print(step1(arr))
+  File "checker.py", line 49, in step1
+    if arr[i] == a:
+IndexError: string index out of range
+
+-------- Test 24: 'CCBB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
+
+-------- Test 25: 'CBACCB' ----------
+ 
+Please enter the string to be recognized: False.
+Goodbye.
