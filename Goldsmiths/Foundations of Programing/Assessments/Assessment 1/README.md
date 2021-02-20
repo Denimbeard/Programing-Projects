@@ -50,7 +50,7 @@ In this recognizer, the starting state is S1, and S7 is the only accepting state
 |Here is an example of what a single run of your program should look like:||
 |--|--|
 |(on-screen output):|`Please enter the string to be recognized:`|
-||(the user enters a string, e.g., “ABHello!#”)|
+|(the user enters a string, e.g., “`ABHello!#`”)||
 |(on-screen output):|`False.`|
 ||`Goodbye.`|
 
