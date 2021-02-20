@@ -11,6 +11,7 @@ For other (e.g., personal) questions not of general interest, do feel free to em
 I look forward to seeing you all soon in the classroom!
 
 With very best wishes,
+
 Max
 
 ## AIMS & LEARNING OUTCOMES
