@@ -1,0 +1,4 @@
+language: python
+rvm:
+  - 2.x
+  - 3.x
