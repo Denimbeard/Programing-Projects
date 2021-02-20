@@ -89,6 +89,8 @@ to the main ‘menu’.
 # ==============================================================================
 
 class Database(object): 
+    database = []
+
     # Counter for student total
     studentid = 000  
     
@@ -101,20 +103,13 @@ class Database(object):
 # ==============================================================================
 # Dunder Functitons
 # ==============================================================================
-    def __new__(cls):
-        first = str(input('Students Given Name: '))
-        last = str(input('Students Surname: '))
-        return first,last
-        print('Success')
-
-    def __init__ (self, first, last):
-        self.first = first
-        self.last = last
-    #    self.mark = mark
-    #    self.credits = credits
-    #    self.id = studentid
+    def __init__ (self):
+        self.first = str(input('Students Given Name: '))
+        self.last = str(input('Students Surname: '))
+        self.__class__.database.append(self)
         Database.studentid += 1
-        print('{} {} has been added to the database.'.format(self.first, self.last))
+        print('{} {} has been added to the database.'.format(self.first, 
+            self.last))
     
     def __str__(self):
         return '{} {}'.format(self.first, self.last)
@@ -123,6 +118,7 @@ class Database(object):
 # ==============================================================================
 # Standard/Custom Functitons
 # ==============================================================================   
+
     # def remove():
     #    pass
 
@@ -138,11 +134,35 @@ class Database(object):
     def fullname(self):
         return("{} {}".format(self.first, self.last))
 
+    def main():
+        _user = None
+        choice = ['A', 'R', 'L', 'G', 'X']
+        while _user is None:
+            _user = input("Choose 'A', 'R', 'L' or 'G' (‘X’ for exit):")
+            try:
+                _user in choice 
+            except:
+                Database.main()      
+        if _user in choice:
+            if _user == 'A':
+                print('Adding Student')
+                Database.main()
+            if _user == 'R':
+                print('Removing Student') 
+                Database.main()
+            if _user == 'L':
+                print('List of Students')
+                Database.main()
+            if _user == 'G':
+                print('Student Grade')
+                Database.main()
+            if _user == 'X':
+                print('Thank You')
+                print('Goodbye!')
+                exit()   
+        else:
+            Database.main()
 # ==============================================================================
 # Output
 # ==============================================================================
-
-_user = input("Choose A, R, or L (‘X’ for exit):")
-
-if _user == 'A':
-   Database()
+Database.main()
