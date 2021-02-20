@@ -1,5 +1,6 @@
 # python Object-Oriented Programing
-# https://www.youtube.com/watch?v=ZDa-Z5JzLYM
+
+## <https://www.youtube.com/watch?v=ZDa-Z5JzLYM>
 
 Creating Classes:
 Why Use Classes?
@@ -83,12 +84,13 @@ Do not forget the self indicator in the class method
 instance.fullname() -> instance will be ran through the method
 
 These are the same thing:
+
 1. emp_1.fullname()
 2. print(Employee.fullname(emp_1))
 
 so use the first one to save time and code
 
-# https://www.youtube.com/watch?v=BJ-VvGyQxho
+## <https://www.youtube.com/watch?v=BJ-VvGyQxho>
 
 class variables are variables that are shared over all instances of that class
 
@@ -108,13 +110,13 @@ class Employee:
 
     def apply_raise(self):
         self.pay = int(self.pay * 1.04)
-    
+
 emp_1.apply_raise() -> will now do the math for the raise
 
 setting the raise ammount as a class variable will clean up the code!
 
 class Employee:
-    
+
     raise_amount = 1.04
 
     def __init__(self -> the initial instance is self
@@ -132,5 +134,3 @@ class Employee:
 
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amount)
-
-        

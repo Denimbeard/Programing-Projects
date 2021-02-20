@@ -88,40 +88,61 @@ to the main ‘menu’.
 # Processes
 # ==============================================================================
 
-class database: 
+class Database(object): 
+    # Counter for student total
+    studentid = 000  
+    
     # Bool states for functions
     addstate = False
     restate = False
     rosstate = False
     exstate = False
     grastate = False
+# ==============================================================================
+# Dunder Functitons
+# ==============================================================================
+    def __new__(cls):
+        first = str(input('Students Given Name: '))
+        last = str(input('Students Surname: '))
+        return first,last
+        print('Success')
 
-    def __init__ (self, first, last, mark, credits, id):
-        # Counter for student total
-        studentid = 000 
+    def __init__ (self, first, last):
         self.first = first
         self.last = last
-        self.mark = mark
-        self.credits = credits
-        self.id = studentid
-        studentid += 1
+    #    self.mark = mark
+    #    self.credits = credits
+    #    self.id = studentid
+        Database.studentid += 1
+        print('{} {} has been added to the database.'.format(self.first, self.last))
+    
+    def __str__(self):
+        return '{} {}'.format(self.first, self.last)
 
-    def add():
-        pass
+    
+# ==============================================================================
+# Standard/Custom Functitons
+# ==============================================================================   
+    # def remove():
+    #    pass
 
-    def remove():
-        pass
+    #def roster():
+    #    pass
 
-    def roster():
-        pass
+    #def exit():
+    #    pass
 
-    def exit():
-        pass
+    #def grade():
+    #    pass
 
-    def grade():
-        pass
-
+    def fullname(self):
+        return("{} {}".format(self.first, self.last))
 
 # ==============================================================================
 # Output
 # ==============================================================================
+
+_user = input("Choose A, R, or L (‘X’ for exit):")
+
+if _user == 'A':
+   Database()
