@@ -1,8 +1,8 @@
 # Foundations of Programming 2020-21
 
-## Term-2 Assignment
+[![Build Status](https://travis-ci.com/Denimbeard/Programing-Projects.svg?branch=main)](https://travis-ci.com/Denimbeard/Programing-Projects)
 
-## 100 points (25% of the module)
+## Term-2 Assignment 100 points (25% of the module)
 
 **Implement a simple Database Management System in Python (ver 3.7) which enables the user to create and maintain a database of students** in Python’s RAM (not on the hard drive).
 
