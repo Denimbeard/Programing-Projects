@@ -3,9 +3,9 @@
 # =============================================================================
 # Author Details
 # =============================================================================
-__author__ = 'Chet Coenen'
+__author__ = 'Chet Coenen, Aleksander Szczepanski'
 __copyright__ = 'Copyright 2020'
-__credits__ = ['Chet Coenen']
+__credits__ = ['Chet Coenen', 'Aleksander Szczepanski']
 __license__ = '/LICENSE'
 __version__ = '1.0'
 __status__ = 'Building'
@@ -20,8 +20,8 @@ __username__ = 'Denimbeard'
 # Class Data
 # =============================================================================
 __course__ = 'Foundations of Programing'
-__date__ = '8 December 2020'
-__teammates__ = ['Chet Coenen']
+__date__ = 'Friday, 19 February 2021'
+__teammates__ = ['Chet Coenen', 'Aleksander Szczepanski']
 __laboratory__ = ''
 __description__ = 'Assessment 2'
 __studentid__ = '33683213'
@@ -35,71 +35,21 @@ enables the user to create and maintain a database of students
 # ==============================================================================
 # Variables
 # ==============================================================================
-
-# TODO:
-# A
-"""
-Prompt them to enter a new student’s first and surname
-as two separate strings
-a new Student record (containing first and surname) 
-should be added to the current set of students.
-"""
-
-# TODO:
-# R
-"""
-Program should ask the user to enter first and surname of an existing Student.
-If present in the database, the corresponding Student record 
-should be removed from it.
-If the database does not contain the specified Student
-print a warning message.
-"""
-
-# TODO:
-# L
-"""The program should print the full list of students currently in the database
- with each student’s surname and first printed in order
-If the database is empty print a warning.
-"""
-
-# TODO:
-# X
-""" Program should terminate ‘gracefully’. """
-
-# TODO:
-# G
-""" 
-Check if the database is empty
-Ask the user to enter a student’s first and surname as two strings.
-If the Student is currently in the ‘database’, the program should 
-then ask the user to enter first a grade (one of ‘A’, ‘B’, ‘C’ or ‘D’) 
-as a string, and then the corresponding Credit Hours for that grade, 
-as a float > 0.0.
-The student’s record should then be updated to contain both the QPs 
-and corresponding Credit Hours.
-If the database is empty when option G is chosen, or if it does not 
-contain a Student with the provided first & surname, the code should 
-not crash, but print an appropriate warning message and return directly 
-to the main ‘menu’.
-"""
-
-""" Your interface must closely follow the above requirements. """
 # ==============================================================================
 # Processes
 # ==============================================================================
 class Student(object):
-
+    count = 0
+    
     def __init__(self, first, last):
+        self.number = Student.count
         self.first = first
         self.last = last
-        
-    def __name__(self, first, last):
-        self.first + self.last
-
-
+        Student.count += 1
+    
     def main():
         __user = None
-        __choice = ['A', 'R', 'L', 'X']
+        __choice = ['A', 'R', 'L', 'X', 'Test']
         
 
         """ While user input is null, offer to accept input. """
@@ -117,12 +67,7 @@ class Student(object):
             
             """ Initiates class as new instance to build a student """
             if __user == 'A':
-            #    print('Adding Student')
-                first = str(input('Students Given Name: '))
-                last = str(input('Students Surname: '))
-
-                print(first + ' ' + last + ' has been added to the database.\n')
-                studentList.append(Student(first, last))
+                Student.add()
                 Student.main()
            
             """ Will Remove a class instance """
@@ -134,24 +79,42 @@ class Student(object):
             """ Will list all available instances """
             if __user == 'L':
                 print('List of Students: \n')
+                print('Given Name' + ' | ' + 'Family Name' + ' | ' + 'GPA' + ' | ' + 'Credit Hours\n')
                 for obj in studentList: 
-                    print('Given Name' + ' | ' + 'Family Name' + ' | ' + 'GPA' + ' | ' + 'Credit Hours\n')
                     print( obj.first, obj.last, sep =' | ' )
-                    print(type(studentList))
-                    return studentList
                 Student.main()
             
             """ Will add grades to class instance (See class init for maths) """
             if __user == 'G':
                 print('Student Grade')
+                obj.gpa = input('Enter Grade: ')
+                obj.credit = input('Enter Credit Hours: ')
                 Student.main()
             
             """ If X is chosen, close system and do not offer main menu. """
             if __user == 'X':
                    Student.exstate()
+
+            if __user == 'Test':
+                Student.test()
+                Student.main()
         else:
             Student.main()
 
+    def add():
+        sl = studentList
+        print('Adding Student')
+        first = str(input('Students Given Name: '))
+        last = str(input('Students Surname: '))
+        
+        cnt = studentList.count(str(first))
+        
+        if cnt >1:
+            print('Student already in database.')
+        else:
+            studentList.append(Student(first, last))
+            print(first + ' ' + last + ' has been added to the database.\n')
+            
     def remove():
         first = str(input('Students Given Name: '))
         last = str(input('Students Surname: '))
@@ -161,7 +124,12 @@ class Student(object):
         print('Thank you.')
         print('Goodbye!')
         exit()
-
+    
+    def test():
+        first = 'Test'
+        last = 'Student'
+        Student(first, last)
+        studentList.append(Student(first, last))
 # ==============================================================================
 # Output
 # ==============================================================================

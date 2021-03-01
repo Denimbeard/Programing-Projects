@@ -3,6 +3,15 @@
         "Gunpei",
         "LEDs",
         "Lipsey",
-        "luggable"
-    ]
+        "aleksander",
+        "luggable",
+        "szczepanski"
+    ],
+    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.9/bin/python3",
+    "python.testing.pytestArgs": [
+        "Goldsmiths"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
 }
