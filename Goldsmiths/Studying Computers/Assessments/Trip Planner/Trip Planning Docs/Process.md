@@ -1,5 +1,14 @@
 # Objectives
 
+- [Objectives](#objectives)
+  - [Hypothesis](#hypothesis)
+  - [Method](#method)
+    - [Online survey](#online-survey)
+    - [1 to 1 interview](#1-to-1-interview)
+  - [Process](#process)
+    - [Show the results](#show-the-results)
+    - [Analysis](#analysis)
+
 Updated: 5th March, 2021
 
 TO DO:

@@ -1,8 +1,10 @@
 # Travel app - Objectives and process
 
 - [Travel app - Objectives and process](#travel-app---objectives-and-process)
+  - [Objectives & Hypothesis](#objectives--hypothesis)
 
-Objectives & Hypothesis:
+## Objectives & Hypothesis
+
 |Objective: What do we want to figure out|Why:|Hypothesis: What we think the results will show us|Why:|Questionnaire Question:|
 |--|--|--|--|--|
 |What travel apps people use?|To find out what our competitors are, what they offer|People will use Rail planner, Tripit and airbnb|These are big in the market rail planner for interrailing and airbnb for accommodation|Have you ever used any travel planning apps? What travel apps have you used?|

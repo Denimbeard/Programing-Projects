@@ -1,5 +1,9 @@
 # python Object-Oriented Programing
 
+- [python Object-Oriented Programing](#python-object-oriented-programing)
+  - [<https://www.youtube.com/watch?v=ZDa-Z5JzLYM>](#httpswwwyoutubecomwatchvzda-z5jzlym)
+  - [<https://www.youtube.com/watch?v=BJ-VvGyQxho>](#httpswwwyoutubecomwatchvbj-vvgyqxho)
+
 ## <https://www.youtube.com/watch?v=ZDa-Z5JzLYM>
 
 Creating Classes:
@@ -8,7 +12,7 @@ Classes allow us to logically group data and functions for reuse and addition.
 Method: a function associated with a class.
 
 Ex:
-Employees in buiness database
+Employees in business database
 class Employee:
     pass -> tells python to skip the object
 
