@@ -1,6 +1,6 @@
 # Foundations of Programming 2020-21
 
-[![Build Status](https://travis-ci.com/Denimbeard/Programing-Projects.svg?branch=main)](https://travis-ci.com/Denimbeard/Programing-Projects)
+![Due](https://img.shields.io/date/1616673600?label=Due%20in)
 
 ## Term-2 Assignment 100 points (25% of the module)
 
