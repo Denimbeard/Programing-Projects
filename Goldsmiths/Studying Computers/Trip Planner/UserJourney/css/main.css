@@ -152,11 +152,17 @@ textarea {
         column-width: 17em;
         column-gap: 3em;
     }
+
     [class*="row-"] {
         break-inside: avoid;
     }
+
     body {
         margin: 0;
         background-color: white;
+    }
+    textarea {
+        height: auto;
+        width: 100%;
     }
 }
