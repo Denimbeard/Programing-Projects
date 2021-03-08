@@ -170,6 +170,8 @@ The network in the diagram above shows the distances, in km, between eight weath
 
 ## Question 5. (Network Flow)
 
+![Network](https://github.com/Denimbeard/Programing-Projects/blob/main/Goldsmiths/Problem%20Solving/Assessments/Assessment%202/img/NetworkFlow.png)
+
 The above network models a drainage system. The capacity of each arc is shown on the arc, in litres per second, and the numbers in circles indicate a feasible flow through the network.
 
 ### Write down the source vertices and the sink vertex
