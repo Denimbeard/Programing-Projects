@@ -4,6 +4,7 @@
   - [Coursework 2](#coursework-2)
     - [Due: 26th March, 2021, 17:00](#due-26th-march-2021-1700)
   - [Question 1. (Allocation Problem)](#question-1-allocation-problem)
+    - [Complete the data in the table by choosing suitable numbers to put at the sites marked ‘No’ so that they become ‘unattractive’](#complete-the-data-in-the-table-by-choosing-suitable-numbers-to-put-at-the-sites-marked-no-so-that-they-become-unattractive)
     - [Using Hungarian algorithm, determine an allocation that provides](#using-hungarian-algorithm-determine-an-allocation-that-provides)
       - [The maximum daily profit](#the-maximum-daily-profit)
       - [The minimum daily profit](#the-minimum-daily-profit)
@@ -63,7 +64,7 @@ The owner of a theme park wishes to provide a snack shop, a restaurant, a café 
 The market researcher also suggests some of the catering are not suitable at some of the
 sites and these are indicated by a No.
 
-Complete the data in the table by choosing suitable numbers to put at the sites marked ‘No’ so that they become ‘unattractive’
+### Complete the data in the table by choosing suitable numbers to put at the sites marked ‘No’ so that they become ‘unattractive’
 
 ### Using Hungarian algorithm, determine an allocation that provides
 
