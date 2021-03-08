@@ -139,7 +139,7 @@ If the profit on each component A, B and C is £8, £9 and £11 respectively,
 
 ## Question 4. (Travelling Salesman Problem)
 
-! [TravellingSalesmanProblem](./Goldsmiths/Problem Solving/Assessments/Assessment 2/img/Salesman.png)
+! [TravellingSalesmanProblem](/Goldsmiths/Problem Solving/Assessments/Assessment 2/img/Salesman.png)
 
 The network in the diagram above shows the distances, in km, between eight weather data collection points. Starting and finishing at A, Alice needs to visit each collection point at least once, in a minimum distance.
 
