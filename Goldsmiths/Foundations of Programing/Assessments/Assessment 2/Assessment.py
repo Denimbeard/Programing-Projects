@@ -87,74 +87,48 @@ to the main ‘menu’.
 # ==============================================================================
 # Processes
 # ==============================================================================
-class Student(object):
+def main():
+    user = None
+    choice = ['A', 'R', 'L', 'X', 'T']
+    
+    mark = { 'A':4, 'B':3, 'C':2, 'D':1}
+    
+    studentList = {}
+    studentList['Students'] = {}
+    studentID = 1
 
-    def __init__(self, first, last):
-        self.first = first
-        self.last = last
+    def add(ID, dct):
+        #    print('Adding Student')
+        first = str(input('Students Given Name: '))
+        last = str(input('Students Surname: '))
+
+        if first in dct['Students']:
+            print('test')
+            if last in dct['Students']:
+                print('[{} {}] in database already.'.format(first, last))
         
-    def __name__(self, first, last):
-        self.first + self.last
-
-
-    def main():
-        __user = None
-        __choice = ['A', 'R', 'L', 'X']
-        
-
-        """ While user input is null, offer to accept input. """
-        while __user is None:
-            __user = input("Choose 'A', 'R', 'L' or 'G' (‘X’ for exit): ")
-            
-            """ Check that the user has entered an appropriate option, otherwise offer main menu. """
-            try:
-                __user in __choice 
-            except:
-                Student.main()      
-        
-        """ Once a choice is made, perform the following action and then offer main menu again. """
-        if __user in __choice:
-            
-            """ Initiates class as new instance to build a student """
-            if __user == 'A':
-            #    print('Adding Student')
-                first = str(input('Students Given Name: '))
-                last = str(input('Students Surname: '))
-
-                print(first + ' ' + last + ' has been added to the database.\n')
-                studentList.append(Student(first, last))
-                Student.main()
-           
-            """ Will Remove a class instance """
-            if __user == 'R':
-                Student.remove()
-                print('Removing Student') 
-                Student.main()
-            
-            """ Will list all available instances """
-            if __user == 'L':
-                print('List of Students: \n')
-                for obj in studentList: 
-                    print('Given Name' + ' | ' + 'Family Name' + ' | ' + 'GPA' + ' | ' + 'Credit Hours\n')
-                    print( obj.first, obj.last, sep =' | ' )
-                    print(type(studentList))
-                    return studentList
-                Student.main()
-            
-            """ Will add grades to class instance (See class init for maths) """
-            if __user == 'G':
-                print('Student Grade')
-                Student.main()
-            
-            """ If X is chosen, close system and do not offer main menu. """
-            if __user == 'X':
-                   Student.exstate()
         else:
-            Student.main()
+            print(first + ' ' + last + ' has been added to the database.\n')
+            dct['Students'][first + last] = {}
+            dct['Students'][first + last]['ID'] = ID
+            dct['Students'][first + last]['first'] = first
+            dct['Students'][first + last]['last'] = last
+            return dct
 
     def remove():
         first = str(input('Students Given Name: '))
         last = str(input('Students Surname: '))
+        print(first + ' ' + last + ' has been removed from the database.\n')
+
+    def catalog(dct):
+        print('List of Students: \n')
+        print('Given Name' + ' | ' + 'Family Name' + ' | ' + 'Mark' + ' | ' + 'Credit Hours\n')
+        print(dct)
+        
+    def grade():
+        pass
+
+
 
 
     def exstate():
@@ -162,12 +136,58 @@ class Student(object):
         print('Goodbye!')
         exit()
 
+    def testing():
+        studentList['Students']['TestStudent'] = {}
+        studentList['Students']['TestStudent']['ID'] = 0
+        studentList['Students']['TestStudent']['first'] = 'Test'
+        studentList['Students']['TestStudent']['last'] = 'Student'
+        studentList['Students']['TestStudent']['mark'] = 'A'
+        studentList['Students']['TestStudent']['hours'] = 100.0
+
+    while user is None:
+        user = input("Choose 'A', 'R', 'L' or 'G' (‘X’ for exit): ")
+
+        while user in choice:
+            
+            if user == 'A':
+                add(studentID,studentList)
+                studentID =+ 1
+                user = None    
+                break
+            
+            if user == 'R':
+                print('Removing Student') 
+                remove()
+                user = None    
+                break
+                
+            if user == 'L':
+                catalog(studentList)
+                user = None    
+                break
+
+            if user == 'G':
+                print('Student Grade')
+                user = None
+                break
+        
+            if user == 'T':
+                testing()
+                user = None    
+                break   
+
+            if user == 'X':
+                exstate() 
+        
+        else:
+            user = None
+
+
+
 # ==============================================================================
 # Output
 # ==============================================================================
 
-studentList = []
-
 print('\n')
 print('Welcome Administrator!\n')
-Student.main()
+main()
