@@ -89,7 +89,7 @@ to the main ‘menu’.
 # ==============================================================================
 def main():
     user = None
-    choice = ['A', 'R', 'L', 'X', 'T']
+    choice = [ 'A', 'R', 'L', 'G', 'X', 'T']
     
     mark = { 'A':4, 'B':3, 'C':2, 'D':1}
     
@@ -98,38 +98,119 @@ def main():
     studentID = 1
 
     def add(ID, dct):
-        #    print('Adding Student')
         first = str(input('Students Given Name: '))
         last = str(input('Students Surname: '))
 
-        if first in dct['Students']:
-            print('test')
-            if last in dct['Students']:
-                print('[{} {}] in database already.'.format(first, last))
-        
-        else:
+        if datachk(dct,first,last) is not True:
             print(first + ' ' + last + ' has been added to the database.\n')
             dct['Students'][first + last] = {}
             dct['Students'][first + last]['ID'] = ID
             dct['Students'][first + last]['first'] = first
             dct['Students'][first + last]['last'] = last
             return dct
+    
+    def datachk(dct, fname, lname):
+        if fname+lname in dct['Students']:
+            print('{} {} is in the database.'.format(fname, lname))
+            return True
 
-    def remove():
+        else: 
+            print('{} {} is not in the database.'.format(fname, lname))
+            return False
+
+    def remove(dct):
         first = str(input('Students Given Name: '))
         last = str(input('Students Surname: '))
-        print(first + ' ' + last + ' has been removed from the database.\n')
+        
+        if datachk(dct,first,last) is True:
+            del dct['Students'][first+last]
+            print('{} {} has been removed from the database.'.format(first, last))
+            return dct
+            
 
     def catalog(dct):
         print('List of Students: \n')
         print('Given Name' + ' | ' + 'Family Name' + ' | ' + 'Mark' + ' | ' + 'Credit Hours\n')
         print(dct)
         
-    def grade():
-        pass
+    def grade(dct, user, mark): 
+        guser = None
+        choice = ['A', 'B', 'C', 'D', 'E', 'F']
 
+        first = None
+        last = None
+        grade = None
+        hours = None
+        
+        while guser is None:
+            first = str(input('Students Given Name: '))
+            guser = 'A'
+        
+            while guser in choice:
+            
+                if guser == 'A':
+                    if namechk(first) is True:
+                        guser = 'B' 
+                       
+                    else: 
+                        guser = None
+            
+                if guser == 'B':
+                    last = str(input('Students Surname: '))
+                    if namechk(last):
+                        guser = 'C' 
+                            
+                        
+                    else: 
+                        guser = 'B'
+                         
+                
+                if guser == 'C':
+                    if datachk(dct, first, last) is True:
+                        guser = 'D'
+                         
+                        
+                    else:
+                        user = None
+                        break
 
+                if guser == 'D':
+                    grade = input('Grade: ')
 
+                    try: 
+                        type(grade) == str
+                        
+                        if grade in mark:
+                            guser = 'E'
+                    
+                    except: 
+                        print('Please enter a proper grade letter. (A, B, C, or D)')
+                        
+        
+                if guser == 'E':
+                    try: 
+                        hours = float(input('Hours: '))
+                        
+                    except:
+                        print('Sorry, please enter a decimal number.')
+                        guser = 'E'    
+                        
+                    guser = 'F'
+                        
+
+                if guser == 'F':
+                    dct['Students'][first + last] = {}
+                    dct['Students'][first + last]['Grade'] = grade
+                    dct['Students'][first + last]['Hours'] = hours
+                    dct['Students'][first + last]['QP'] = hours * mark[grade]
+                    user = None
+                    break
+        
+            else:
+                guser = None
+
+    def namechk(name):
+        return name.isalnum()
 
     def exstate():
         print('Thank you.')
@@ -143,6 +224,7 @@ def main():
         studentList['Students']['TestStudent']['last'] = 'Student'
         studentList['Students']['TestStudent']['mark'] = 'A'
         studentList['Students']['TestStudent']['hours'] = 100.0
+        print('Test Student added.')
 
     while user is None:
         user = input("Choose 'A', 'R', 'L' or 'G' (‘X’ for exit): ")
@@ -156,8 +238,7 @@ def main():
                 break
             
             if user == 'R':
-                print('Removing Student') 
-                remove()
+                remove(studentList)
                 user = None    
                 break
                 
@@ -167,7 +248,7 @@ def main():
                 break
 
             if user == 'G':
-                print('Student Grade')
+                grade(studentList, user, mark)
                 user = None
                 break
         
@@ -181,8 +262,6 @@ def main():
         
         else:
             user = None
-
-
 
 # ==============================================================================
 # Output
