@@ -104,6 +104,7 @@ def main():
                 catalogFormat(value)
             
             else:
+                sortList = {}
                 GPA = 0
                 
                 try:
@@ -112,7 +113,12 @@ def main():
                 except ZeroDivisionError:
                     GPA = 'No'
                 
-                print('| {}, {} : {} GPA'.format(dct.get('last'), dct.get('first'),GPA))
+                sortList['first'] = dct.get('first')
+                sortList['last'] = dct.get('last')
+                sortList['GPA'] = GPA
+                # sortList = sorted(sortList.items(), key = lambda x: x[1]['GPA'])
+                
+                print('| {}, {}: {} GPA'.format(sortList['first'], sortList['last'], sortList['GPA']))
                 break
 
 
