@@ -72,6 +72,8 @@ def main():
             dct['Students'][first + last]['ID'] = ID
             dct['Students'][first + last]['first'] = first
             dct['Students'][first + last]['last'] = last
+            dct['Students'][first + last]['Hours'] = 0
+            dct['Students'][first + last]['QP'] = 0
             return dct
 
 # Removal Function
@@ -93,19 +95,27 @@ def main():
         print('| ')
         catalogFormat(dct, 4)
 
-            
 # Pretty Print
     def catalogFormat(dct):
         for key, value in dct.items():
-
-            #TODO: List Iteration needs to be one time, but all instances
-
+            # Checks for multiple instances of dict in the main dict
             if isinstance(value, dict):
-                print('| ', key, ' |')
+                # Brings out the next dictionary if there is one
                 catalogFormat(value)
-                print('| ', ' |')
+            
             else:
-                print('| ', dct.get('Last'), ', ',dct.get('First'), ': ', (dct.get('QP')/dct.get('Hours')), ' GPA')
+                GPA = 0
+                
+                try:
+                    GPA = dct.get('QP')/dct.get('Hours')
+
+                except ZeroDivisionError:
+                    GPA = 'No'
+                
+                print('| {}, {} : {} GPA'.format(dct.get('last'), dct.get('first'),GPA))
+                break
+
+
 
 # Grade Entry Functions
     def grade(dct, user, mark): 
@@ -234,13 +244,13 @@ def main():
         studentList['Students']['TestStudent']['ID'] = 0
         
         # Test Student is named 'Test Student'
-        studentList['Students']['TestStudent']['First'] = 'Test'
-        studentList['Students']['TestStudent']['Last'] = 'Student'
+        studentList['Students']['TestStudent']['first'] = 'Test'
+        studentList['Students']['TestStudent']['last'] = 'Student'
         
         # Given Mark to Verify Calculations
-        studentList['Students']['TestStudent']['Mark'] = 'A'
+        studentList['Students']['TestStudent']['Grade'] = 'A'
         studentList['Students']['TestStudent']['Hours'] = 100.0
-        studentList['Students']['TestStudent']['QP'] = studentList['Students']['TestStudent']['Hours'] * mark[studentList['Students']['TestStudent']['Mark']]
+        studentList['Students']['TestStudent']['QP'] = studentList['Students']['TestStudent']['Hours'] * mark[studentList['Students']['TestStudent']['Grade']]
         
         # Confirms Creation
         print('Test Student added.')
